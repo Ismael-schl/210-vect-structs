@@ -10,3 +10,14 @@ struct Resturaunt {
     string genre;
 };
 
+Resturaunt populateResturaunt();
+void outputResturaunt(const Resturaunt &);
+
+int main() {
+    Resturaunt myRest = populateResturaunt();
+    
+}
+
+Resturaunt populateResturaunt() {
+    
+}

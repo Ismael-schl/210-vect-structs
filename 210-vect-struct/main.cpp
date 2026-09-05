@@ -17,6 +17,6 @@ int main() {
     cin >> myColor.green;
     cout << "Enter your color's blue hue value. then press enter: ";
     cin >> myColor.blue;
-    cout << myColor.red << myColor.green << myColor.blue;
+    cout << "Red: " << myColor.red << " Green: " << myColor.green << " Blue: " << myColor.blue;
     return 0;
 }
