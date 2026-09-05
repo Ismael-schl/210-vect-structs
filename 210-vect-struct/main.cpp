@@ -13,9 +13,11 @@ Color PopulateColor();
 void OutputColor(const Color &c);
 
 int main() {
+    vector<Color> colors;
     Color myColor = PopulateColor();
+    colors.push_back(myColor);
     cout << "Confirming color values via output: " << endl;
-    OutputColor(myColor);
+    OutputColor(colors[0]);
     return 0;
 }
 
