@@ -26,9 +26,9 @@ int main() {
 
 Color PopulateColor() {
     Color temp;
-    temp.red = rand() % (255-1);
-    temp.green = rand() % (255-1);
-    temp.blue = rand() % (255-1);
+    temp.red = rand() % (255+1);
+    temp.green = rand() % (255+1);
+    temp.blue = rand() % (255+1);
     return temp;
 }
 
