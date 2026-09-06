@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <random>
+#include <ctime>
 
 using namespace std;
 
@@ -13,18 +14,17 @@ struct Color {
 Color PopulateColor();
 void OutputColor(const Color &c);
 void PopulateVector(vector<Color> &colors);
+void OutputVector(vector<Color> &colors);
 
 int main() {
+    srand(time(0));
     vector<Color> colors;
-    Color myColor = PopulateColor();
-    colors.push_back(myColor);
-    cout << "Confirming color values via output: " << endl;
-    OutputColor(colors[0]);
+    PopulateVector(colors);
+    OutputVector(colors);
     return 0;
 }
 
 Color PopulateColor() {
-    srand(time(0));
     Color temp;
     temp.red = rand();
     temp.green = rand();
@@ -38,12 +38,15 @@ void OutputColor(const Color &c) {
     cout << "\t> Blue hue value: " << c.blue << endl;
 }
 void PopulateVector(vector<Color> &colors){
-    srand(time(0));
     int n = rand() % (50-25+1)+25;
     Color rands;
     for (int i = 0; i < n; ++i){ 
         rands = PopulateColor();
-        colors[i] = rands;
+        colors.push_back(rands);
     }
-
+}
+void OutputVector(vector<Color> &colors) {
+    for (int j = 0; j < colors.size(); j++) {
+        cout << endl << "Red: " << colors[j].red << endl << "Green: " << colors[j].green << endl << "Blue: " << colors[j].blue << endl;
+}
 }
