@@ -42,8 +42,13 @@ void PopulateVector(vector<Color> &colors){
 }
 
 void OutputVector(vector<Color> &colors) {
-    cout << left << setw(20) << "Color# " << setw(20) << "R Value " << setw(20) << "G Value " << setw(20) << "B Value " << endl;
+    cout << left << setw(20) << "Color#" << setw(20) << "R Value" << setw(20) << "G Value" << setw(20) << "B Value" << endl;
+    cout << left << setw(20) << "------" << setw(20) << "-------" << setw(20) << "-------" << setw(20) << "-------" << endl;
     for (int j = 0; j < colors.size(); j++) {
-        cout << endl << "Red: " << colors[j].red << endl << "Green: " << colors[j].green << endl << "Blue: " << colors[j].blue << endl;
+        cout << left << setw(20) << (j+1)
+            << setw(20) << colors[j].red
+            << setw(20) << colors[j].green
+            << setw(20) << colors[j].blue
+            << endl;
     }
 }
